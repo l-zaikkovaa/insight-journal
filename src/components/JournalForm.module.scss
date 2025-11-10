@@ -1,0 +1,28 @@
+.form {
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+
+  input,
+  textarea {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  button {
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    background-color: #1a3d7c;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+
+  .cancel {
+    background-color: #fff;
+    color: #1a3d7c;
+    border: 1px solid #1a3d7c;
+  }
+}
