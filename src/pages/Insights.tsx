@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './Insight.module.scss';
+import styles from './Insights.module.scss';
 
 function Insights() {
   return (
