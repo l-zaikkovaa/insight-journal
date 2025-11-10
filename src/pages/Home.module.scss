@@ -1,0 +1,36 @@
+.container {
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.title {
+  font-size: 2.2rem;
+  color: #1a3d7c;
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.linkButton {
+  padding: 0.75rem 1.5rem;
+  background-color: #1a3d7c;
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.2s;
+
+  &:hover {
+    background-color: #163262;
+  }
+}
