@@ -1,0 +1,22 @@
+.app-nav {
+  padding: 1rem;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 1rem;
+  display: flex;
+  gap: 1rem;
+
+  .nav-link {
+    text-decoration: none;
+    color: #1a3d7c;
+    font-weight: bold;
+    transition: color 0.2s;
+
+    &:hover {
+      color: #163262;
+    }
+  }
+}
+
+.app-content {
+  padding: 1rem;
+}
