@@ -1,4 +1,3 @@
-import React from 'react';
 import { type Entry } from '../api/journalApi';
 import styles from './JournalCard.module.scss';
 import { moods } from './../components/MoodSelector';

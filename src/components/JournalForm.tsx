@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { type Entry, api } from '../api/journalApi';
+import { useState, useEffect } from 'react';
+import { type Entry} from '../api/journalApi';
 import MoodSelector from './MoodSelector';
 import styles from './JournalForm.module.scss';
 

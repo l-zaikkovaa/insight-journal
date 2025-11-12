@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import { useMemo } from 'react';
 import { type Entry } from '../api/journalApi';
 import {
   LineChart,
