@@ -18,4 +18,9 @@
   &.active {
     background-color: #dbeafe;
   }
+
+  @media (max-width: 640px) {
+    padding: 0.2rem 0.4rem;
+    font-size: 0.875rem;
+  }
 }
