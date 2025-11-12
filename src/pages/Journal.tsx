@@ -34,7 +34,7 @@ export default function Journal() {
 
   return (
     <div className={styles.container}>
-      <div className={styles.formWrapper}>
+      <div className={`card ${styles.formWrapper}`}>
         <JournalForm
           onCreate={(data) => create.mutate(data)}
           onUpdate={(id, patch) => update.mutate({ id, patch })}
