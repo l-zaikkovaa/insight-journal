@@ -10,8 +10,6 @@ export default function Insights() {
     queryFn: api.listEntries,
   });
 
-  console.log(entries);
-
   const moodCounts = entries.reduce<Record<MoodKey, number>>(
     (acc, entry) => {
       acc[entry.mood] = (acc[entry.mood] || 0) + 1;

@@ -1,14 +1,19 @@
 .header {
-  display: flex; /* Tailwind flex */
-  align-items: center; /* Tailwind items-center */
-  justify-content: space-between; /* Tailwind justify-between */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @media (min-width: 640px) {
+    flex-direction: row;
+    align-items: center;
+  }
 }
 
 .container {
-  max-width: 48rem; /* Tailwind max-w-3xl */
+  max-width: 48rem;
   margin-left: auto;
   margin-right: auto;
-  // padding: 1.5rem; /* Tailwind p-6 */
+  // padding: 1.5rem;
 }
 
 .title {
