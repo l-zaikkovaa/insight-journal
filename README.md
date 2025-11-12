@@ -16,7 +16,7 @@ A digital journaling & reflection app that helps users track their thoughts, emo
 - LocalStorage 
 
 ## 🚀 Demo
-Coming soon... *(to be deployed on Vercel)*
+[Live Demo on Vercel](https://insight-journal-roan.vercel.app/)
 
 
 ## 📚 Project Goals
