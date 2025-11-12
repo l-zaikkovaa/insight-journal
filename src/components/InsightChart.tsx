@@ -25,20 +25,27 @@ function moodToScore(m: Entry['mood']) {
       return 2;
   }
 }
-
 export default function InsightChart({ entries }: { entries: Entry[] }) {
   const data = useMemo(() => {
-    const map = new Map();
+    const map = new Map<
+      string,
+      { date: string; score: number; count: number }
+    >();
     entries
       .slice()
       .reverse()
       .forEach((e) => {
-        const d = e.createdAt.slice(0, 10);
+        const d = new Date(e.createdAt);
+        const dateStr = d.toLocaleDateString('en-US', {
+          day: 'numeric',
+          month: 'short',
+        });
         const score = moodToScore(e.mood);
-        if (!map.has(d)) {
-          map.set(d, { date: d, score, count: 1 });
+
+        if (!map.has(dateStr)) {
+          map.set(dateStr, { date: dateStr, score, count: 1 });
         } else {
-          const cur = map.get(d);
+          const cur = map.get(dateStr)!;
           cur.score = (cur.score * cur.count + score) / (cur.count + 1);
           cur.count += 1;
         }
@@ -52,13 +59,30 @@ export default function InsightChart({ entries }: { entries: Entry[] }) {
       <div style={{ fontSize: '0.875rem', color: '#6b7280' }}>No data yet</div>
     );
 
+  const scoreToMood = (score: number) => {
+    if (score >= 3.5) return '😄';
+    if (score >= 2.5) return '🤩';
+    if (score >= 1.5) return '😐';
+    if (score >= 0.5) return '😰';
+    return '😢';
+  };
+
   return (
     <div style={{ width: '100%', height: 240 }}>
       <ResponsiveContainer>
         <LineChart data={data}>
           <XAxis dataKey="date" />
-          <YAxis domain={[0.4]} />
-          <Tooltip />
+          <YAxis
+            domain={[0, 4]}
+            ticks={[0, 1, 2, 3, 4]}
+            tickFormatter={scoreToMood}
+          />
+          <Tooltip
+            formatter={(value: number) => [
+              `${scoreToMood(value)} (${value.toFixed(2)})`,
+              'Mood',
+            ]}
+          />
           <Line
             type="monotone"
             dataKey="score"

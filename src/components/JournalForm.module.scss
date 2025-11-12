@@ -66,14 +66,9 @@
   font-size: 1rem;
   transition: background-color 0.2s;
 
-  &:hover {
-    background-color: #1e40af;
-  }
-
-  @media (max-width: 640px) {
-    font-size: 0.9rem;
-    padding: 0.45rem 0.9rem;
-  }
+.btn_primary:hover {
+  background-color: #1e40af;
+  transform: translateY(-1px);
 }
 
 .btn_secondary {
@@ -85,12 +80,7 @@
   font-size: 1rem;
   transition: background-color 0.2s;
 
-  &:hover {
-    background-color: #f3f4f6;
-  }
-
-  @media (max-width: 640px) {
-    font-size: 0.9rem;
-    padding: 0.45rem 0.7rem;
-  }
+.btn_secondary:hover {
+  background-color: #f3f4f6;
+  transform: translateY(-1px);
 }

@@ -136,13 +136,30 @@
   @media (max-width: 640px) {
     padding: 0.2rem 0.4rem;
     font-size: 0.8rem;
+
+    background-color: #fff;
+    cursor: pointer;
+    transition:
+      background-color 0.2s,
+      transform 0.1s ease;
+
+    &:hover {
+      background-color: #f9fafb;
+      transform: translateY(-1px);
+    }
   }
 }
 
 .deleteButton {
   color: #dc2626; // text-red-600
 
-  &:hover {
-    background-color: #fee2e2;
+  .delete {
+    color: #c00;
+    border-color: #c00;
+
+    &:hover {
+      background-color: #fee2e2;
+      transform: translateY(-1px);
+    }
   }
 }
