@@ -7,6 +7,7 @@ import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 
 export default function Journal() {
   const queryClient = useQueryClient();
+  const [editing, setEditing] = useState<Entry | null>(null);
 
   const { data: entries = [], isLoading } = useQuery<Entry[]>({
     queryKey: ['entries'],
@@ -29,8 +30,6 @@ export default function Journal() {
       api.updateEntry(id, patch),
     onSuccess: () => queryClient.invalidateQueries({ queryKey: ['entries'] }),
   });
-
-  const [editing, setEditing] = useState<Entry | null>(null);
 
   return (
     <div className={styles.container}>

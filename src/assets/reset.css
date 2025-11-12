@@ -1,13 +1,9 @@
-/* === Reset.css (современный минимализм) === */
-
-/* Убираем все внешние отступы и внутренние поля */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Наследуем шрифт для всех элементов */
 *,
 *::before,
 *::after {
@@ -15,7 +11,6 @@
   font: inherit;
 }
 
-/* Убираем дефолтные стили заголовков и параграфов */
 h1,
 h2,
 h3,
@@ -27,13 +22,11 @@ p {
   margin: 0;
 }
 
-/* Ссылки без подчеркивания */
 a {
   text-decoration: none;
   color: inherit;
 }
 
-/* Списки без маркеров */
 ul,
 ol {
   list-style: none;
@@ -41,13 +34,11 @@ ol {
   padding: 0;
 }
 
-/* Изображения адаптивные */
 img {
   max-width: 100%;
   display: block;
 }
 
-/* Убираем стили кнопок по умолчанию */
 button,
 input,
 textarea,
@@ -58,13 +49,11 @@ select {
   outline: none;
 }
 
-/* Для удобства скролла */
 html,
 body {
   height: 100%;
 }
 
-/* Базовые стили для body */
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
