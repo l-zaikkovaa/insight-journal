@@ -9,10 +9,12 @@ function App() {
     <Router>
       <div className="container">
         <header className="header">
-          <div>
-            <h1 className="title">Insight Journal</h1>
-            <p className="small">Reflect • Track • Learn</p>
-          </div>
+          <Link to="/">
+            <div>
+              <h1 className="title">Insight Journal</h1>
+              <p className="small">Reflect • Track • Learn</p>
+            </div>
+          </Link>
           <nav className="app_nav">
             <Link to="/" className="nav_link">
               Home
