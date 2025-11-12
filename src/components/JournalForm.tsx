@@ -70,32 +70,75 @@ export default function JournalForm({
   }
 
   return (
-    <form onSubmit={submit} className={styles.form}>
-      <input
-        type="text"
-        value={title}
-        onChange={(e) => setTitle(e.target.value)}
-        placeholder="Title"
-      />
-      <MoodSelector value={mood} onChange={(m) => setMood(m)} />
+    <form onSubmit={submit} className={styles.journal_form}>
+      <div className={styles.form_row}>
+        <input
+          value={title}
+          onChange={(e) => setTitle(e.target.value)}
+          placeholder="Title"
+          className={styles.input_field}
+        />
+        <MoodSelector value={mood} onChange={setMood} />
+      </div>
+
       <textarea
         value={content}
         onChange={(e) => setContent(e.target.value)}
-        placeholder="Content"
+        placeholder="Write your insight..."
+        className={styles.textarea_field}
       />
+
       <input
         value={tags}
         onChange={(e) => setTags(e.target.value)}
-        placeholder="Tags"
+        placeholder="tags (comma separated)"
+        className={styles.input_field}
       />
-      <div style={{ display: 'flex', gap: 'o.5rem' }}>
-        <button type="submit">{editing ? 'Save' : 'Add Entry'}</button>
+
+      <div className={styles.form_row}>
+        <button type="submit" className={styles.btn_primary}>
+          {editing ? 'Save' : 'Add Entry'}
+        </button>
         {editing && (
-          <button type="button" onClick={onCancel} className="cancel">
+          <button
+            type="button"
+            onClick={onCancel}
+            className={styles.btn_secondary}
+          >
             Cancel
           </button>
         )}
       </div>
     </form>
+
+    // <form onSubmit={submit} className={styles.form}>
+    //   <div className={styles.form_row}>
+    //     <input
+    //       type="text"
+    //       value={title}
+    //       onChange={(e) => setTitle(e.target.value)}
+    //       placeholder="Title"
+    //     />
+    //     <MoodSelector value={mood} onChange={(m) => setMood(m)} />
+    //   </div>
+    //   <textarea
+    //     value={content}
+    //     onChange={(e) => setContent(e.target.value)}
+    //     placeholder="Content"
+    //   />
+    //   <input
+    //     value={tags}
+    //     onChange={(e) => setTags(e.target.value)}
+    //     placeholder="Tags"
+    //   />
+    //   <div style={{ display: 'flex', gap: 'o.5rem' }}>
+    //     <button type="submit">{editing ? 'Save' : 'Add Entry'}</button>
+    //     {editing && (
+    //       <button type="button" onClick={onCancel} className="cancel">
+    //         Cancel
+    //       </button>
+    //     )}
+    //   </div>
+    // </form>
   );
 }

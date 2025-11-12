@@ -11,7 +11,7 @@ const Home = () => {
         Your personal space to track journal entries and explore insights.
       </p>
       <div className={styles.links}>
-        <Link to="/" className={styles.linkButton}>
+        <Link to="/journal" className={styles.linkButton}>
           Go to Journal
         </Link>
         <Link to="/insights" className={styles.linkButton}>
