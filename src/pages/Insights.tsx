@@ -1,4 +1,3 @@
-import React from 'react';
 import { useQuery } from '@tanstack/react-query';
 import { api, type Entry } from '../api/journalApi';
 import InsightChart from '../components/InsightChart';
@@ -22,10 +21,6 @@ export default function Insights() {
   );
 
   const moodsInEntries = moods.filter((m) => moodCounts[m.key as MoodKey] > 0);
-
-  const entriesFilter = (moodCat: MoodKey) => {
-    return entries.filter((e) => e.mood === moodCat).length;
-  };
 
   return (
     <div className={styles.container}>

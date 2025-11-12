@@ -1,4 +1,3 @@
-import React from 'react';
 import styles from './MoodSelector.module.scss';
 
 export const moods = [

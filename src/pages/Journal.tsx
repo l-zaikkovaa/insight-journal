@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { api, type Entry } from '../api/journalApi';
 import JournalCard from '../components/JournalCard';
 import JournalForm from '../components/JournalForm';
