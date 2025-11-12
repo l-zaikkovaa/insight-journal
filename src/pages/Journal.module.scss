@@ -2,6 +2,10 @@
   max-width: 48rem;
   margin: 0 auto;
   padding: 0 1rem;
+
+  @media (max-width: 640px) {
+    padding: 0 0.5rem;
+  }
 }
 
 .formWrapper {
