@@ -5,7 +5,7 @@
 
   padding: 1rem;
   margin-bottom: 1rem;
-  background-color: #fff;
+  background-color: var(--card-bg);
   border-radius: 6px;
   box-shadow:
     0 1px 3px rgba(0, 0, 0, 0.1),
@@ -37,7 +37,7 @@
 
 .title {
   font-weight: bold;
-  color: #1a3d7c;
+  color: var(--primary-color);
 
   @media (max-width: 640px) {
     font-size: 0.95rem;
@@ -46,7 +46,7 @@
 
 .date {
   font-size: 0.85rem;
-  color: #6b7280;
+  color: var(--date-text-color);
   margin-bottom: 0.25rem;
 
   @media (max-width: 640px) {
@@ -56,7 +56,7 @@
 
 .content {
   font-size: 0.875rem;
-  color: #374151;
+  color: var(--text-color);
   margin-top: 0.25rem;
 
   @media (max-width: 640px) {
@@ -74,7 +74,8 @@
 .tag {
   font-size: 0.75rem;
   padding: 0.25rem 0.5rem;
-  background-color: #f3f4f6;
+  background-color: var(--secondary-bg);
+  color: var(--tag-text-color);
   border-radius: 0.25rem;
 
   @media (max-width: 640px) {
@@ -122,15 +123,16 @@
 
 .button {
   padding: 0.25rem 0.5rem;
-  border: 1px solid #d1d5db;
+  border: 1px solid var(--border-color);
   border-radius: 0.25rem;
   font-size: 0.875rem;
-  background-color: #fff;
+  background-color: var(--card-bg);
+  color: var(--text-color);
   cursor: pointer;
   transition: background-color 0.2s ease;
 
   &:hover {
-    background-color: #f9fafb;
+    background-color: var(--secondary-bg);
   }
 
   @media (max-width: 640px) {
@@ -151,15 +153,11 @@
 }
 
 .deleteButton {
-  color: #dc2626; // text-red-600
+  color: var(--error-color);
+  border-color: var(--error-color); // text-red-600
 
-  .delete {
-    color: #c00;
-    border-color: #c00;
-
-    &:hover {
-      background-color: #fee2e2;
-      transform: translateY(-1px);
-    }
+  &:hover {
+    background-color: rgba(248, 113, 113, 0.2);
+    transform: translateY(-1px);
   }
 }

@@ -3,8 +3,11 @@ import Journal from './pages/Journal';
 import Insights from './pages/Insights';
 import Home from './pages/Home';
 import './App.scss';
+import { useTheme } from './context/ThemeContext';
 
 function App() {
+  const { theme, toggleTheme } = useTheme();
+
   return (
     <Router>
       <div className="container">
@@ -26,6 +29,9 @@ function App() {
               Insights
             </Link>
           </nav>
+          <button onClick={toggleTheme}>
+            {theme === 'light' ? '🌙 Dark' : '☀️ Light'}
+          </button>
         </header>
       </div>
 
