@@ -1,18 +1,44 @@
 .container {
+  padding: 4rem 1rem;
+  display: flex;
+  justify-content: center;
   text-align: center;
-  padding: 3rem 1rem;
+  animation: fadeIn 0.8s ease both;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 48rem;
+  animation: slideUp 0.7s ease both;
 }
 
 .title {
-  font-size: 2.2rem;
-  color: #1a3d7c;
-  margin-bottom: 1rem;
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 1.25rem;
+  background: linear-gradient(
+    90deg,
+    var(--primary-color),
+    color-mix(in srgb, var(--primary-color) 50%, var(--text-color)),
+    var(--text-color)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .subtitle {
-  font-size: 1.1rem;
-  color: #555;
-  margin-bottom: 2rem;
+  font-size: 1.25rem;
+  color: var(--tag-text-color);
+  margin-bottom: 1.25rem;
+}
+
+.subtitle_small {
+  font-size: 1rem;
+  color: var(--date-text-color);
+  margin-bottom: 2.5rem;
 }
 
 .links {
@@ -21,16 +47,98 @@
   gap: 1.5rem;
 }
 
-.linkButton {
-  padding: 0.75rem 1.5rem;
-  background-color: #1a3d7c;
-  color: #fff;
-  border-radius: 6px;
-  text-decoration: none;
+.primary_btn {
+  padding: 0.75rem 1.75rem;
+  background-color: var(--primary-color);
+  color: white;
   font-weight: 600;
-  transition: background-color 0.2s;
+  border-radius: 10px;
+  text-decoration: none;
+  transition:
+    background-color 0.25s ease,
+    transform 0.25s ease;
+  box-shadow: 0 3px 6px var(--card-shadow);
 
   &:hover {
-    background-color: #163262;
+    background-color: color-mix(in srgb, var(--primary-color) 85%, black);
+    transform: translateY(-2px);
+  }
+}
+
+.secondary_btn {
+  padding: 0.75rem 1.75rem;
+  background-color: var(--secondary-bg);
+  color: var(--text-color);
+  font-weight: 600;
+  border-radius: 10px;
+  text-decoration: none;
+  border: 1px solid var(--border-color);
+  transition:
+    background-color 0.25s ease,
+    transform 0.25s ease;
+
+  &:hover {
+    background-color: color-mix(in srgb, var(--secondary-bg) 80%, white);
+    transform: translateY(-2px);
+  }
+}
+
+[data-theme='dark'] .primaryButton {
+  background-color: var(--primary-color);
+  color: #fff;
+
+  &:hover {
+    background-color: color-mix(in srgb, var(--primary-color) 75%, white);
+  }
+}
+
+[data-theme='dark'] .secondaryButton {
+  background-color: var(--card-bg);
+  border-color: var(--border-color);
+  color: var(--text-color);
+
+  &:hover {
+    background-color: color-mix(in srgb, var(--card-bg) 85%, white);
+  }
+}
+
+.chips {
+  display: flex;
+  justify-content: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.8rem;
+}
+
+.chip {
+  padding: 0.35rem 0.75rem;
+  font-size: 0.85rem;
+  border-radius: 999px;
+  background: var(--secondary-bg);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
