@@ -14,7 +14,7 @@ export default function JournalCard({ entry, onEdit, onDelete }: Props) {
   const moodInfo: Mood | undefined = moods.find((m) => m.key === entry.mood);
 
   return (
-    <div className={styles.card}>
+    <div className={`card ${styles.card}`}>
       <div className={styles.entryInfo}>
         <div className={styles.header}>
           <div>

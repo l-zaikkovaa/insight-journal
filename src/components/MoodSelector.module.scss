@@ -5,18 +5,19 @@
 
 .journal_mood_btn {
   padding: 0.25rem 0.5rem;
-  border: 1px solid #d1d5db;
+  border: 1px solid var(--border-color);
   border-radius: 0.25rem;
-  background-color: white;
+  background-color: var(--card-bg);
+  color: var(--text-color);
   cursor: pointer;
   transition: background-color 0.2s ease;
 
   &:hover {
-    background-color: #dbeafe;
+    background-color: var(--mood-bg);
   }
 
   &.active {
-    background-color: #dbeafe;
+    background-color: var(--mood-bg);
   }
 
   @media (max-width: 640px) {

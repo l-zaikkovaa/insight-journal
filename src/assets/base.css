@@ -4,9 +4,37 @@ body,
   height: 100%;
 }
 
+:root {
+  --bg-color: #f9fafb;
+  --text-color: #1f2937;
+  --date-text-color: #6b7280;
+  --tag-text-color: #374151;
+  --card-bg: #ffffff;
+  --card-shadow: rgba(0, 0, 0, 0.08);
+  --border-color: #d1d5db;
+  --primary-color: #2563eb;
+  --secondary-bg: #f3f4f6;
+  --error-color: #dc2626;
+  --mood-bg: #dbeafe;
+}
+
+[data-theme='dark'] {
+  --bg-color: #1f2937;
+  --text-color: #f9fafb;
+  --date-text-color: #f9fafbc8;
+  --tag-text-color: #858d9d;
+  --card-bg: #111827;
+  --card-shadow: rgba(0, 0, 0, 0.3);
+  --border-color: #374151;
+  --primary-color: #3b82f6;
+  --secondary-bg: #374151;
+  --error-color: #f87171;
+  --mood-bg: #7f8a98;
+}
+
 body {
-  background-color: #f9fafb;
-  color: #1f2937;
+  background-color: var(--bg-color);
+  color: var(--text-color);
   font-family:
     Inter,
     ui-sans-serif,
@@ -19,16 +47,25 @@ body {
     sans-serif;
 }
 
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.card {
+  background-color: var(--card-bg);
+  box-shadow: 0 2px 6px var(--card-shadow);
+}
+
 .container {
   max-width: 48rem;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
   padding: 1.5rem;
 }
 
 /* Карточка */
 .card {
-  background-color: #ffffff;
+  background-color: var(--card-bg);
   border-radius: 0.5rem;
   box-shadow:
     0 1px 3px rgba(0, 0, 0, 0.1),
