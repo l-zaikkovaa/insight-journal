@@ -10,11 +10,6 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
-
-  @media (max-width: 640px) {
-    flex-direction: column;
-    align-items: stretch;
-  }
 }
 
 .input_field {
@@ -47,15 +42,10 @@
   resize: vertical;
   outline: none;
   transition: border-color 0.2s;
+}
 
-  &:focus {
-    border-color: #2563eb;
-  }
-
-  @media (max-width: 640px) {
-    font-size: 0.9rem;
-    padding: 0.65rem;
-  }
+.textarea_field:focus {
+  border-color: #2563eb;
 }
 
 .btn_primary {
@@ -67,6 +57,7 @@
   cursor: pointer;
   font-size: 1rem;
   transition: background-color 0.2s;
+}
 
   &:hover {
     background-color: #1e4fd1;
@@ -83,6 +74,7 @@
   cursor: pointer;
   font-size: 1rem;
   transition: background-color 0.2s;
+}
 
   &:hover {
     background-color: var(--secondary-bg);
