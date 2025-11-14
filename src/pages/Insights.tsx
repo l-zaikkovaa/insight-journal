@@ -31,16 +31,16 @@ export default function Insights() {
       </div>
 
       <div className={styles.card}>
-        <h3 className={styles.subheadingSmall}>Quick stats</h3>
+        <h3 className={styles.subheading_small}>Quick stats</h3>
         <div className={styles.grid}>
           <div>
-            <div className={styles.statNumber}>{entries.length}</div>
-            <div className={styles.statLabel}>Total entries</div>
+            <div className={styles.stat_number}>{entries.length}</div>
+            <div className={styles.stat_label}>Total entries</div>
           </div>
           {moodsInEntries.map((m) => (
             <div key={m.key}>
-              <div className={styles.statNumber}>{moodCounts[m.key]}</div>
-              <div className={styles.statLabel}>
+              <div className={styles.stat_number}>{moodCounts[m.key]}</div>
+              <div className={styles.stat_label}>
                 {m.key.charAt(0).toUpperCase() + m.key.slice(1)}
                 {` ${m.label}`}
               </div>

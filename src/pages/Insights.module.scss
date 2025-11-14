@@ -13,10 +13,19 @@
 }
 
 .card {
-  background-color: #fff;
   border-radius: 12px;
-  padding: 1rem;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  // padding: 1rem;
+  background-color: var(--card-bg);
+  box-shadow: 0 2px 4px var(--card-shadow);
+  padding: 1.25rem 1.5rem;
+  transition:
+    background-color 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+
+  &:hover {
+    box-shadow: 0 4px 12px var(--card-shadow);
+  }
 
   @media (max-width: 640px) {
     padding: 0.75rem;
@@ -35,10 +44,11 @@
   margin-bottom: 1rem;
 }
 
-.subheadingSmall {
+.subheading_small {
   font-size: 0.865rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
+  color: var(--text-color);
 }
 
 .grid {
@@ -56,12 +66,15 @@
   }
 }
 
-.statNumber {
-  font-size: 1.5rem;
+.stat_number {
+  font-size: 1.8rem;
   font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 0.25rem;
+  transition: color 0.25s ease;
 }
 
-.statLabel {
+.stat_label {
   font-size: 0.75rem;
   font-weight: 500;
   color: #6b7280;
