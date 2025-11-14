@@ -21,10 +21,15 @@
   font-size: 1rem;
   outline: none;
   transition: border-color 0.2s;
-}
 
-.input_field:focus {
-  border-color: var(--primary-color);
+  &:focus {
+    border-color: var(--primary-color);
+  }
+
+  @media (max-width: 640px) {
+    font-size: 0.9rem;
+    padding: 0.45rem 0.65rem;
+  }
 }
 
 .textarea_field {
@@ -55,7 +60,7 @@
 }
 
   &:hover {
-    background-color: darken(#2563eb, 10%);
+    background-color: #1e4fd1;
     transform: translateY(-1px);
   }
 }
